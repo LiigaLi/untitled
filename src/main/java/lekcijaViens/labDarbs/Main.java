@@ -107,7 +107,13 @@ System.out.println("test" + valuta + atzime + dzimums);
         System.out.println(rezultats);
 
 
-
+//kompānija
+ String kompanija = "Maxima";
+ System.out.println("Komānijas nosaukums: " + kompanija);
+ int skaits = 85;
+ System.out.println("Veikalu skaits Latvijā: " + skaits);
+ boolean atverts24h = false;
+ System.out.println("Vai veikals ir atvērts 24h? " + atverts24h);
 
 
 

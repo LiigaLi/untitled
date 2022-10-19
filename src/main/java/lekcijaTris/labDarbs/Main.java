@@ -17,6 +17,7 @@ public class Main {
         printetKartinu();
         printNewLine();
         printetKartinu();
+
         System.out.println("Beidzās programma");
         int laukums = aprekinatTaisnsturaLaukumu(3, 10);
         System.out.print("Taisnstūra laukums ir:" + laukums);
@@ -104,6 +105,7 @@ public class Main {
             System.out.println(cars[z]);
             z = z + 1;
         }
+        System.out.println("kods turpinās");
 
         String[] kartis2 = {"Pīķa dūzis", "Ercena kalps", "Kreiča dāma"};
 
@@ -141,6 +143,18 @@ public class Main {
         for (char burts: vards){
             System.out.print(burts);
         }
+
+        Scanner ievade = new Scanner(System.in);
+        System.out.println("Ievadi skaitli...");
+        int number = ievade.nextInt();
+        int summa = 0;
+        while (number > 0) {
+            summa = summa + number;
+            System.out.println("Ievadi skaitli...");
+            number = ievade.nextInt();
+        }
+        System.out.println("summa ir: " + summa);
+
 
     }
 

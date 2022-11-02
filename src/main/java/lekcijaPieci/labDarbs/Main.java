@@ -5,47 +5,46 @@ public class Main {
         Cat muris = new Cat();
         Dog reksis = new Dog();
         Cow govs = new Cow();
-        Fish zivs = new Fish();
-
-
         muris.age = 3;
-        reksis.age = 6;
+        muris.canClimbTrees = true;
+
+        reksis.makeSound();
+
+        reksis.canClimbTrees = false;
 
         muris.breathe();
         reksis.breathe();
         govs.breathe();
-        zivs.breathe();
 
         muris.makeSound();
         reksis.makeSound();
         govs.makeSound();
-
         muris.eat();
         reksis.eat();
-
         muris.sharpenClaws();
         reksis.growl();
 
-        muris.canClimbTrees = true;
-
-        reksis.canClimbTrees = false;
-
         muris.printClimbing();
 
-        House house = new House(1, 2, 3, "Liepu", 2.5,
-                100000L,true);
+        House house = new House(1,2,3,"Brivibas",
+                2.5,100000L,true);
 
         house.printHouse();
-        house.setKadastralaVertiba(300000L);
-        house.setAdrese("Meža iela");
+        house.setKadastralaVertiba(30000L);
+        house.setAdrese("Tallinas iela");
+
         System.out.println("Mājas adrese ir: " + house.getAdrese());
 
+
         house.printHouse();
 
-        Calculator kalkulators = new Calculator();
-        System.out.println(kalkulators.add('5',  10));
+        Person cilveks1 = new Person("Juris","Kreilis");
+        System.out.println(cilveks1.getPersonsKods());
 
 
+        System.out.println(Calculator.add(5,10));
+        System.out.println(Calculator.add(5.0,10.0));
+        System.out.println(Calculator.add(3,5,7));
 
 
 

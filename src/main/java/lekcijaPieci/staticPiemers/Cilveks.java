@@ -1,18 +1,23 @@
 package lekcijaPieci.staticPiemers;
 
 public class Cilveks {
-    public static int darbiniekaNumurs = 0;
     public String name;
+    public int age = 0;
+    public static int count=1;
+    public int darbiniekaNumurs;
 
     public Cilveks(String name) {
         this.name = name;
-        darbiniekaNumurs ++;
-
-
+        darbiniekaNumurs = count;
+        count++;
     }
-    public void printName(){
+
+    public void printName() {
         System.out.println("Cilveka vards ir: " + name);
-        System.out.println("Darbinieka numurs ir: " + darbiniekaNumurs);
+    }
+
+    public static void printCount() {
+        System.out.println(count);
     }
 }
 

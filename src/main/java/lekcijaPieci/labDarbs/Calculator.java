@@ -1,12 +1,16 @@
 package lekcijaPieci.labDarbs;
 
 public class Calculator {
-    public int add (int o, int p){
-        return o + p;
+    public static int add(int a, int b) {
+        return a + b;
     }
 
-    public double add (double o, double p) {
-        return o + p;
-
+    public static double add(double a, double b) {
+        return a + b;
     }
+
+    public static int add(int a, int b, int c) {
+        return a + b + c;
+    }
+
 }

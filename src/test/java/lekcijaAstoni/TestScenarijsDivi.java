@@ -13,23 +13,21 @@ public class TestScenarijsDivi extends BaseTest {
     public void testCheckoutPageMandatoryFields() throws InterruptedException {
         System.out.println("1. Navigēt uz saiti https://www.saucedemo.com/");
         System.out.println("2. Ielogoties ar pareizu lietotāja vārdu/paroli");
-        LoginPage loginPage = new LoginPage(parluks);
+        LoginPage loginPage = new LoginPage(driver);
+        ProductsPage produktuLapa = new ProductsPage(driver);
         loginPage.login("standard_user","secret_sauce");
-
-        ProductsPage produktuLapa = new ProductsPage(parluks);
-        Assert.assertEquals(produktuLapa.getPageTitle().getText(),"PRODUCTS");
-
+        Assert.assertEquals(produktuLapa.getPageTitle().getText(), "PRODUCTS");
 
         System.out.println("3. Doties uz grozu");
-        CartPage grozaLapa = new CartPage(parluks);
+        CartPage grozaLapa = new CartPage(driver);
         produktuLapa.getCartButton().click();
         Assert.assertEquals(grozaLapa.getPageTitle().getText(),"YOUR CART");
 
         System.out.println("4. Doties uz Checkout");
         grozaLapa.getCheckoutButton().click();
 
-        System.out.println("5. Pārbaudīt ");
-        CheckoutPage checkoutLapa = new CheckoutPage(parluks);
+        System.out.println("5. Pārbaudīt, ka FirstName/LastName/Zip code ir obligāts");
+        CheckoutPage checkoutLapa = new CheckoutPage(driver);
         Assert.assertEquals(checkoutLapa.getPageTitle().getText(),"CHECKOUT: YOUR INFORMATION");
         checkoutLapa.clickContinueButton();
 
@@ -39,10 +37,7 @@ public class TestScenarijsDivi extends BaseTest {
         checkoutLapa.clickContinueButton();
         Assert.assertEquals(checkoutLapa.getErrorText(),"Error: Last Name is required");
 
-        Thread.sleep(5000);
-
-
-
     }
+
 
 }

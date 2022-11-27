@@ -1,4 +1,4 @@
-package lekcijaSeptini.labDarbs;
+package lekcijaDevini;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -18,7 +18,7 @@ public class BaseTest {
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.navigate().to("https://www.saucedemo.com/");
+        driver.navigate().to("https://www.barbora.lv/");
 
     }
 
@@ -28,4 +28,3 @@ public class BaseTest {
     }
 
 }
-

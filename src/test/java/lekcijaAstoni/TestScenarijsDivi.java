@@ -18,6 +18,17 @@ public class TestScenarijsDivi extends BaseTest {
         loginPage.login("standard_user","secret_sauce");
         Assert.assertEquals(produktuLapa.getPageTitle().getText(), "PRODUCTS");
 
+
+        // System.out.println("Prece ir grozā");
+        // produktuLapa.getProductItem().click();
+        // Assert.assertEquals(produktuLapa.getProductItem(),"add-to-cart-sauce-labs-bike-light");
+
+        //produktuLapa.getProductCartButton().click();
+       // Assert.assertEquals(produktuLapa.getProductCartButton(),"shopping_cart_container");
+
+
+
+
         System.out.println("3. Doties uz grozu");
         CartPage grozaLapa = new CartPage(driver);
         produktuLapa.getCartButton().click();
@@ -37,7 +48,18 @@ public class TestScenarijsDivi extends BaseTest {
         checkoutLapa.clickContinueButton();
         Assert.assertEquals(checkoutLapa.getErrorText(),"Error: Last Name is required");
 
+        checkoutLapa.inputLastName("Liberga");
+        checkoutLapa.clickContinueButton();
+
+        Assert.assertEquals(checkoutLapa.getErrorText(),"Error: Postal Code is required");
+        checkoutLapa.inputPostalCode("LV3139");
+        checkoutLapa.clickContinueButton();
+
+
+
     }
+
+
 
 
 }

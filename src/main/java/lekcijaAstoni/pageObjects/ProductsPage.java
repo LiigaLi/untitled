@@ -20,22 +20,18 @@ public class ProductsPage extends BasePage{
 
     private By inventoryItems = By.id("inventory_item");
 
-    private By productItem = By.id("iitem_0_ttle_link");
+    private By productItem = By.id("add-to-cart-sauce-labs-bike-light");
     public WebElement getProductItem(){
         return driver.findElement(productItem);
     }
-    public void clickOnProductItem(){
-        driver.findElement((productItem)).click();
-    }
 
 
-    private By addToCart = By.id("add-to-cart-sauce-labs-bike-light");
-    public WebElement getAddToCart(){
-        return driver.findElement(addToCart);
+
+    private By getProductCartButton = By.id("shopping_cart_badge");
+    public WebElement getProductCartButton(){
+        return driver.findElement(cartButton);
     }
-    public void clickOnAddToCart(){
-        driver.findElement(addToCart).click();
-    }
+
 
 
 
